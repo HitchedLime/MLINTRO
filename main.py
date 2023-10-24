@@ -20,7 +20,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y.values, test_size=0.33,
 
 net = neural_net.NeuralNetwork()
 criterion = nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(net.parameters(), lr=0.01)
+optimizer = torch.optim.Adam(net.parameters(), lr=0.01,weight_decay=1e-5)
 
 batch_size = 5
 num_epochs = 15
